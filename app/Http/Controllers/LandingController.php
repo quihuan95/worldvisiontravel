@@ -1,0 +1,122 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
+
+class LandingController extends Controller
+{
+  public function index()
+  {
+    $data = [
+      'slides' => [
+        [
+          'image' => 'https://placehold.co/800x400?text=Paris+Conference',
+          'caption' => 'Hội nghị quốc tế tại Paris',
+          'description' => 'Tổ chức thành công hội nghị với hơn 500 đại biểu quốc tế'
+        ],
+        [
+          'image' => 'https://placehold.co/800x400?text=Tokyo+Tour',
+          'caption' => 'Tour khám phá Tokyo',
+          'description' => 'Trải nghiệm văn hóa Nhật Bản độc đáo với hướng dẫn viên chuyên nghiệp'
+        ],
+        [
+          'image' => 'https://placehold.co/800x400?text=Sydney+Event',
+          'caption' => 'Sự kiện ngoài trời tại Sydney',
+          'description' => 'Festival âm nhạc quốc tế với 10,000 khách tham dự'
+        ],
+        [
+          'image' => 'https://placehold.co/800x400?text=Singapore+Business',
+          'caption' => 'Hội thảo kinh doanh tại Singapore',
+          'description' => 'Kết nối doanh nghiệp Đông Nam Á với các đối tác toàn cầu'
+        ]
+      ],
+      'destinations' => [
+        ['name' => 'Paris, Pháp', 'image' => 'https://placehold.co/400x300?text=Paris', 'tours' => '25 tours'],
+        ['name' => 'Tokyo, Nhật Bản', 'image' => 'https://placehold.co/400x300?text=Tokyo', 'tours' => '18 tours'],
+        ['name' => 'New York, Mỹ', 'image' => 'https://placehold.co/400x300?text=New+York', 'tours' => '22 tours'],
+        ['name' => 'London, Anh', 'image' => 'https://placehold.co/400x300?text=London', 'tours' => '20 tours'],
+        ['name' => 'Dubai, UAE', 'image' => 'https://placehold.co/400x300?text=Dubai', 'tours' => '15 tours'],
+        ['name' => 'Singapore', 'image' => 'https://placehold.co/400x300?text=Singapore', 'tours' => '12 tours']
+      ],
+      'testimonials' => [
+        [
+          'name' => 'Nguyễn Văn An',
+          'position' => 'Giám đốc ABC Corporation',
+          'content' => 'Dịch vụ tuyệt vời! Công ty đã tổ chức thành công hội nghị quốc tế cho chúng tôi với hơn 300 đại biểu từ 15 quốc gia.',
+          'rating' => 5,
+          'image' => 'https://placehold.co/100x100?text=An'
+        ],
+        [
+          'name' => 'Trần Thị Bình',
+          'position' => 'Trưởng phòng Marketing XYZ',
+          'content' => 'Tour du lịch Châu Âu được tổ chức rất chuyên nghiệp. Mọi chi tiết đều được chăm sóc tỉ mỉ.',
+          'rating' => 5,
+          'image' => 'https://placehold.co/100x100?text=Binh'
+        ],
+        [
+          'name' => 'Lê Minh Cường',
+          'position' => 'CEO Tech Startup',
+          'content' => 'Sự kiện ra mắt sản phẩm của chúng tôi đã thành công ngoài mong đợi nhờ sự hỗ trợ của đội ngũ chuyên nghiệp.',
+          'rating' => 5,
+          'image' => 'https://placehold.co/100x100?text=Cuong'
+        ]
+      ]
+    ];
+
+    return view('welcome', $data);
+  }
+
+  public function submitContact(Request $request)
+  {
+    $validated = $request->validate([
+      'name' => 'required|string|max:255',
+      'email' => 'required|email',
+      'phone' => 'required|string',
+      'service' => 'nullable|string',
+      'message' => 'nullable|string'
+    ]);
+
+    try {
+      // Send email notification
+      Mail::to('info@tamnhinthegioi.com')->send(new ContactFormMail($validated));
+
+      // Save to database if needed
+      // Contact::create($validated);
+
+      return response()->json([
+        'success' => true,
+        'message' => 'Yêu cầu đã được gửi thành công! Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.'
+      ]);
+    } catch (\Exception $e) {
+      return response()->json([
+        'success' => false,
+        'message' => 'Có lỗi xảy ra. Vui lòng thử lại sau.'
+      ], 500);
+    }
+  }
+
+  public function subscribeNewsletter(Request $request)
+  {
+    $validated = $request->validate([
+      'email' => 'required|email|unique:newsletter_subscriptions,email'
+    ]);
+
+    try {
+      // Save newsletter subscription
+      // NewsletterSubscription::create($validated);
+
+      return response()->json([
+        'success' => true,
+        'message' => 'Đăng ký newsletter thành công!'
+      ]);
+    } catch (\Exception $e) {
+      return response()->json([
+        'success' => false,
+        'message' => 'Email này đã được đăng ký hoặc có lỗi xảy ra.'
+      ], 500);
+    }
+  }
+}
