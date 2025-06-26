@@ -40,7 +40,7 @@
 
     /* teal-500 */
     .lux-accent-bg {
-      background: linear-gradient(341deg, #87bfb8 0%, #917354 100%);
+      background: linear-gradient(341deg, #ffffff 0%, #ffffff 100%);
     }
 
     .lux-card {
