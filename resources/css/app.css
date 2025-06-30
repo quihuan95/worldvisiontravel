@@ -51,3 +51,72 @@
         animation: bounce 2s infinite;
     }
 }
+
+[x-cloak] {
+    display: none !important;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* .font-display {
+    font-family: 'Playfair Display', serif;
+  } */
+.lux-primary {
+    color: #17375e;
+}
+
+/* blue-600 */
+.lux-primary-bg {
+    background: #f8fafc;
+}
+
+.lux-accent {
+    color: #ea903c;
+}
+
+/* teal-500 */
+.lux-accent-bg {
+    background: linear-gradient(341deg, #ffffff 0%, #ffffff 100%);
+}
+
+.lux-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px 0 rgba(23, 55, 94, 0.07);
+}
+
+.lux-btn {
+    background-color: #ea903c;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px 0 rgba(234, 144, 60, 0.15);
+    transition: box-shadow 0.2s, transform 0.2s, background-color 0.2s;
+}
+
+.lux-btn:hover {
+    background-color: #d88135;
+    box-shadow: 0 4px 16px 0 rgba(234, 144, 60, 0.25);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.lux-section {
+    background: #f8fafc;
+}
+
+.lux-icon {
+    color: #ea903c !important;
+}
+
+.lux-border {
+    border-color: #ea903c !important;
+}
+
+.lux-input:focus {
+    border-color: #17375e !important;
+    box-shadow: 0 0 0 2px rgba(23, 55, 94, 0.2) !important;
+    outline: none;
+}

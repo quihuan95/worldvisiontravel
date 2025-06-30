@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [LandingController::class, 'index'])->name('home');
 
 // API routes for form submissions
 Route::post('/api/contact', function (Illuminate\Http\Request $request) {
@@ -17,7 +18,7 @@ Route::post('/api/contact', function (Illuminate\Http\Request $request) {
     ]);
 
     // Process contact form (save to database, send email, etc.)
-    // Mail::to('info@tamnhinthegioi.com')->send(new ContactFormMail($validated));
+    // Mail::to('events.worldvision@gmail.com')->send(new ContactFormMail($validated));
 
     return response()->json(['message' => 'Yêu cầu đã được gửi thành công!']);
 });

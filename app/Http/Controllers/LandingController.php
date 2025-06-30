@@ -11,27 +11,32 @@ class LandingController extends Controller
   public function index()
   {
     $data = [
-      'slides' => [
+      'slidess' => [
         [
-          'image' => 'https://placehold.co/800x400?text=Paris+Conference',
-          'caption' => 'Hội nghị quốc tế tại Paris',
-          'description' => 'Tổ chức thành công hội nghị với hơn 500 đại biểu quốc tế'
+          "video" => 'https://drive.google.com/file/d/1l1Rsa6JLf6Itbmdd0H8TLoMYKsfyI8KH/preview',
+          "caption" => 'Sự kiện 1',
+          "description" => 'Mô tả sự kiện 1'
         ],
         [
-          'image' => 'https://placehold.co/800x400?text=Tokyo+Tour',
-          'caption' => 'Tour khám phá Tokyo',
-          'description' => 'Trải nghiệm văn hóa Nhật Bản độc đáo với hướng dẫn viên chuyên nghiệp'
+          "video" => 'https://drive.google.com/file/d/12yvipz-XpvYewHgQOpLup_mx3Vv6K7uk/preview',
+          "caption" => 'Sự kiện 2',
+          "description" => 'Mô tả sự kiện 2'
         ],
         [
-          'image' => 'https://placehold.co/800x400?text=Sydney+Event',
-          'caption' => 'Sự kiện ngoài trời tại Sydney',
-          'description' => 'Festival âm nhạc quốc tế với 10,000 khách tham dự'
+          "video" => 'https://drive.google.com/file/d/1eKYe-WiKOXDhZOZtonG6YpM99tysIFFl/preview',
+          "caption" => 'Sự kiện 3',
+          "description" => 'Mô tả sự kiện 3'
         ],
         [
-          'image' => 'https://placehold.co/800x400?text=Singapore+Business',
-          'caption' => 'Hội thảo kinh doanh tại Singapore',
-          'description' => 'Kết nối doanh nghiệp Đông Nam Á với các đối tác toàn cầu'
-        ]
+          "video" => 'https://drive.google.com/file/d/1BKkHI5WyOQiBF8tz9kYyMuZKVOnP0s17/preview',
+          "caption" => 'Sự kiện 4',
+          "description" => 'Mô tả sự kiện 4'
+        ],
+        [
+          "video" => 'https://drive.google.com/file/d/1MMkBJCbtJZucaVqD5SQz90eABDlo7tjU/preview',
+          "caption" => 'Sự kiện 5',
+          "description" => 'Mô tả sự kiện 5'
+        ],
       ],
       'destinations' => [
         ['name' => 'Paris, Pháp', 'image' => 'https://placehold.co/400x300?text=Paris', 'tours' => '25 tours'],
@@ -66,7 +71,7 @@ class LandingController extends Controller
       ]
     ];
 
-    return view('welcome', $data);
+    return view('pages.home', $data);
   }
 
   public function submitContact(Request $request)
@@ -81,7 +86,7 @@ class LandingController extends Controller
 
     try {
       // Send email notification
-      Mail::to('info@tamnhinthegioi.com')->send(new ContactFormMail($validated));
+      Mail::to('events.worldvision@gmail.com')->send(new ContactFormMail($validated));
 
       // Save to database if needed
       // Contact::create($validated);
