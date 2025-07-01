@@ -2,13 +2,13 @@
   <div class="container mx-auto px-4 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center space-x-2">
+      <a href="{{ route('home') }}" class="flex items-center space-x-2">
         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="rounded-lg h-[60px]">
-      </div>
+      </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex space-x-8">
-        <a href="#" class="text-gray-700 hover:text-[#17375e] font-medium transition-colors">Trang chủ</a>
+        <a href="{{ route('home') }}" class="text-gray-700 hover:text-[#17375e] font-medium transition-colors">Trang chủ</a>
         <a href="#services" class="text-gray-700 hover:text-[#17375e] font-medium transition-colors">Dịch vụ</a>
         <a href="#news" class="text-gray-700 hover:text-[#17375e] font-medium transition-colors">Tin Tức</a>
         <a href="#destinations" class="text-gray-700 hover:text-[#17375e] font-medium transition-colors">Điểm đến</a>

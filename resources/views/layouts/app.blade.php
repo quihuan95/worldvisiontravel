@@ -24,6 +24,8 @@
   {{-- popup --}}
   @include('layouts.popup')
 
+  @include('layouts.contact')
+
   @yield('content')
   <!-- Footer -->
   @include('layouts.footer')
@@ -36,56 +38,54 @@
         videoPlaying: false,
 
         slides: [{
-            image: 'https://placehold.co/1200x600?text=Paris+Conference',
-            caption: 'Hội nghị quốc tế tại Paris',
-            description: 'Tổ chức thành công hội nghị với hơn 500 đại biểu quốc tế'
+            image: `{{ asset('images/16.png') }}`,
+            caption: 'APAC DNS Forum 2025 ',
+            link: 'https://drive.google.com/file/d/1BKkHI5WyOQiBF8tz9kYyMuZKVOnP0s17/view?usp=drive_link',
+            description: 'Từ ngày 8 – 9/5/2025, Hà Nội đã trở thành tâm điểm của ngành CNTT châu Á - Thái Bình Dương với sự kiện APAC DNS Forum 2025 – diễn đàn quốc tế quy mô lớn nhất về hệ thống tên miền (DNS) do ICANN phối hợp cùng VNNIC tổ chức.'
           },
           {
-            image: 'https://placehold.co/1200x600?text=Tokyo+Tour',
+            image: `{{ asset('images/17.png') }}`,
             caption: 'Tour khám phá Tokyo',
+            link: 'https://drive.google.com/file/d/1l1Rsa6JLf6Itbmdd0H8TLoMYKsfyI8KH/view?usp=drive_link',
             description: 'Trải nghiệm văn hóa Nhật Bản độc đáo với hướng dẫn viên chuyên nghiệp'
           },
           {
-            image: 'https://placehold.co/1200x600?text=Sydney+Event',
+            image: `{{ asset('images/18.png') }}`,
             caption: 'Sự kiện ngoài trời tại Sydney',
+            link: 'https://drive.google.com/file/d/1eKYe-WiKOXDhZOZtonG6YpM99tysIFFl/view?usp=drive_link',
             description: 'Festival âm nhạc quốc tế với 10,000 khách tham dự'
           },
           {
-            image: 'https://placehold.co/1200x600?text=Singapore+Business',
-            caption: 'Hội thảo kinh doanh tại Singapore',
-            description: 'Kết nối doanh nghiệp Đông Nam Á với các đối tác toàn cầu'
+            image: `{{ asset('images/19.png') }}`,
+            caption: 'Lễ Kỷ Niệm 70 Năm Ngày Truyền Thống Bảo Đảm An Toàn Hàng Hải Việt Nam',
+            link: 'https://drive.google.com/file/d/1MMkBJCbtJZucaVqD5SQz90eABDlo7tjU/view?usp=drive_link',
+            description: 'Ngày 9–10/5/2025, Tổng công ty Bảo đảm An toàn hàng hải Việt Nam long trọng tổ chức Lễ Kỷ niệm 70 năm ngày truyền thống. Sự kiện diễn ra thành công tốt đẹp quy tụ 500 đại biểu trong ngành tham gia'
+          },
+          {
+            image: `{{ asset('images/20.png') }}`,
+            caption: 'Hội Nghị Khoa Học Thường Niên #APSCVIR 2025',
+            link: 'https://drive.google.com/file/d/12yvipz-XpvYewHgQOpLup_mx3Vv6K7uk/view?usp=drive_link',
+            description: 'Từ ngày 25–27/4/2025, Hội nghị khoa học thường niên APSCVIR đã diễn ra thành công tại thành phố Đà Nẵng, quy tụ hơn 1200 chuyên gia, bác sĩ đầu ngành trong lĩnh vực can thiệp mạch và điện quang.'
           }
         ],
 
         destinations: [{
-            name: 'Paris, Pháp',
-            image: 'https://placehold.co/400x300?text=Paris',
-            tours: '25 tours'
+            name: 'HÀ NỘI – HẠ LONG – HÀ NỘI',
+            link: `{{ route('news.show', ['slug' => 'hanoi-halong-hanoi']) }}`,
+            image: `{{ asset('images/HÀ NỘI – HẠ LONG – HÀ NỘI.jpg') }}`,
+            tours: '(3 NGÀY 2 ĐÊM)'
           },
           {
-            name: 'Tokyo, Nhật Bản',
-            image: 'https://placehold.co/400x300?text=Tokyo',
-            tours: '18 tours'
+            name: 'ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN',
+            link: `{{ route('news.show', ['slug' => 'danang-sontra-hoian-banahills-nguhanhson-3n2d']) }}`,
+            image: `{{ asset('images/ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN 3N2Đ.jpg') }}`,
+            tours: '(3 NGÀY 2 ĐÊM)'
           },
           {
-            name: 'New York, Mỹ',
-            image: 'https://placehold.co/400x300?text=New+York',
-            tours: '22 tours'
-          },
-          {
-            name: 'London, Anh',
-            image: 'https://placehold.co/400x300?text=London',
-            tours: '20 tours'
-          },
-          {
-            name: 'Dubai, UAE',
-            image: 'https://placehold.co/400x300?text=Dubai',
-            tours: '15 tours'
-          },
-          {
-            name: 'Singapore',
-            image: 'https://placehold.co/400x300?text=Singapore',
-            tours: '12 tours'
+            name: 'HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI',
+            link: `{{ route('news.show', ['slug' => 'hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi']) }}`,
+            image: `{{ asset('images/HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI.jpg') }}`,
+            tours: '(3 NGÀY 3 ĐÊM)'
           }
         ],
 
@@ -309,15 +309,15 @@
       }
     }
 
-    document.addEventListener('alpine:init', () => {
-      Alpine.store('popup', {
-        open: false
-      }); // Ban đầu ẩn
+    // document.addEventListener('alpine:init', () => {
+    //   Alpine.store('popup', {
+    //     open: false
+    //   }); // Ban đầu ẩn
 
-      setTimeout(() => {
-        Alpine.store('popup').open = true; // Sau 2 giây mới hiện popup
-      }, 2000);
-    });
+    //   setTimeout(() => {
+    //     Alpine.store('popup').open = true; // Sau 2 giây mới hiện popup
+    //   }, 2000);
+    // });
   </script>
 </body>
 @vite('resources/js/app.js')

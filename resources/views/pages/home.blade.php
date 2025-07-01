@@ -18,10 +18,6 @@
         <a href="tel:0913199866" class="lux-btn px-10 py-4 text-lg">
           Liên hệ ngay <i class="fas fa-arrow-right ml-2 lux-icon"></i>
         </a>
-        <button x-on:click="videoPlaying = true"
-          class="border-2 border-[#ea903c] text-[#17375e] hover:bg-[#ea903c] hover:text-white px-10 py-4 text-lg rounded-full transition-all font-semibold">
-          <i class="fas fa-play mr-2 lux-icon"></i> Xem video giới thiệu
-        </button>
       </div>
     </div>
 
@@ -98,43 +94,39 @@
       <div class="grid md:grid-cols-3 gap-8">
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="https://placehold.co/600x400" alt="News 1" class="w-full h-56 object-cover">
+          <img src="{{ asset('images/HÀ NỘI – HẠ LONG – HÀ NỘI.jpg') }}" alt="News 1" class="w-full h-56 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-4 text-[#17375e] hover:underline cursor-pointer">
-              Khám phá tour du lịch Châu Âu cao cấp 2025
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Trải nghiệm hành trình độc đáo đến các quốc gia nổi tiếng với dịch vụ 5 sao.
-            </p>
-            <a href="#" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('news.show', ['slug' => 'hanoi-halong-hanoi']) }}" class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+              HÀ NỘI – HẠ LONG – HÀ NỘI
+            </a>
+            <a href="{{ route('news.show', ['slug' => 'hanoi-halong-hanoi']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i
+                class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="https://placehold.co/600x400" alt="News 2" class="w-full h-56 object-cover">
+          <img src="{{ asset('images/ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN 3N2Đ.jpg') }}" alt="News 2" class="w-full h-56 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-4 text-[#17375e] hover:underline cursor-pointer">
-              Sự kiện hội nghị khách hàng 2025 thành công tốt đẹp
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Hội nghị với sự tham dự của hơn 500 khách hàng doanh nghiệp, được tổ chức chuyên nghiệp.
-            </p>
-            <a href="#" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('news.show', ['slug' => 'danang-sontra-hoian-banahills-nguhanhson-3n2d']) }}"
+              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+              ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN
+            </a>
+            <a href="{{ route('news.show', ['slug' => 'danang-sontra-hoian-banahills-nguhanhson-3n2d']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i
+                class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="https://placehold.co/600x400" alt="News 3" class="w-full h-56 object-cover">
+          <img src="{{ asset('images/HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI.jpg') }}" alt="News 3" class="w-full h-56 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-4 text-[#17375e] hover:underline cursor-pointer">
-              MICE Tourism - Xu hướng du lịch doanh nghiệp 2025
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Giải pháp kết hợp hội họp, du lịch và team building đang được các doanh nghiệp ưa chuộng.
-            </p>
-            <a href="#" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('news.show', ['slug' => 'hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi']) }}"
+              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+              HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI
+            </a>
+            <a href="{{ route('news.show', ['slug' => 'hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i
+                class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
       </div>
@@ -236,7 +228,7 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <template x-for="destination in destinations" :key="destination.name">
-          <div class="group cursor-pointer gsap-item gsap-destination lux-card hover:shadow-xl transition-all duration-300">
+          <a :href="destination.link" class="group cursor-pointer gsap-item gsap-destination lux-card hover:shadow-xl transition-all duration-300">
             <div class="relative overflow-hidden rounded-2xl">
               <img :src="destination.image" :alt="destination.name" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -245,7 +237,7 @@
                 <p class="lux-accent" x-text="destination.tours"></p>
               </div>
             </div>
-          </div>
+          </a>
         </template>
       </div>
     </div>
@@ -264,16 +256,17 @@
       <div class="relative max-w-6xl mx-auto">
         <div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl lux-card">
           <template x-for="(slide, index) in slides" :key="index">
-            <div x-show="currentSlide === index" x-transition:enter="transition ease-in-out duration-700" x-transition:enter-start="opacity-0 transform translate-x-full"
-              x-transition:enter-end="opacity-100 transform translate-x-0" x-transition:leave="transition ease-in-out duration-700"
-              x-transition:leave-start="opacity-100 transform translate-x-0" x-transition:leave-end="opacity-0 transform -translate-x-full" class="absolute inset-0">
+            <a :href="slide.link" target="_blank" x-show="currentSlide === index" x-transition:enter="transition ease-in-out duration-700"
+              x-transition:enter-start="opacity-0 transform translate-x-full" x-transition:enter-end="opacity-100 transform translate-x-0"
+              x-transition:leave="transition ease-in-out duration-700" x-transition:leave-start="opacity-100 transform translate-x-0"
+              x-transition:leave-end="opacity-0 transform -translate-x-full" class="absolute inset-0">
               <img :src="slide.image" :alt="slide.caption" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               <div class="absolute bottom-8 left-8 right-8">
                 <h3 class="text-white text-3xl md:text-4xl font-display font-bold mb-4" x-text="slide.caption"></h3>
                 <p class="text-gray-200 text-lg max-w-2xl" x-text="slide.description"></p>
               </div>
-            </div>
+            </a>
           </template>
         </div>
 

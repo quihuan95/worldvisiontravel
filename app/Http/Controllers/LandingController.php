@@ -124,4 +124,36 @@ class LandingController extends Controller
       ], 500);
     }
   }
+
+  public function getNews($slug)
+  {
+    $listNews = [
+      "hanoi-halong-hanoi" => [
+        "views" => "post1",
+        "title" => "Hà Nội – Hạ Long – Hà Nội",
+        "content_view" => "pages.news.contents.post1"
+      ],
+      "danang-sontra-hoian-banahills-nguhanhson-3n2d" => [
+        "views" => "post2",
+        "title" => "Đà Nẵng – Sơn Trà – Hội An – Bà Nà Hills – Ngũ Hành Sơn",
+        "content_view" => "pages.news.contents.post2"
+      ],
+      "hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi" => [
+        "views" => "post3",
+        "title" => "Hà Nội – Hà Khẩu – Bình Biên – Kiến Thụy – Mông Tự – Hà Nội",
+        "content_view" => "pages.news.contents.post3"
+      ]
+    ];
+
+    if (array_key_exists($slug, $listNews)) {
+      return view('pages.news.layout', [
+        'title' => $listNews[$slug]['title'],
+        'contentView' => $listNews[$slug]['content_view'],
+        'listNews' => $listNews,
+        'currentSlug' => $slug
+      ]);
+    } else {
+      abort(404);
+    }
+  }
 }

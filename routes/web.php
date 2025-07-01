@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingController::class, 'index'])->name('home');
 
+Route::get('/news/{slug}', [LandingController::class, 'getNews'])->name('news.show');
+
+
 // API routes for form submissions
 Route::post('/api/contact', function (Illuminate\Http\Request $request) {
     $validated = $request->validate([
