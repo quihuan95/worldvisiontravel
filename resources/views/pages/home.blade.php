@@ -91,42 +91,57 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-4 gap-8">
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/HÀ NỘI – HẠ LONG – HÀ NỘI.jpg') }}" alt="News 1" class="w-full h-56 object-cover">
+          <img src="{{ asset('images/width_1600.webp') }}" alt="News 1" class="w-full h-56 object-cover">
           <div class="p-6">
-            <a href="{{ route('news.show', ['slug' => 'hanoi-halong-hanoi']) }}" class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              HÀ NỘI – HẠ LONG – HÀ NỘI
+            <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
+              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+              Tổ chức sự kiện chuyên nghiệp A-Z cùng World Vision Events
             </a>
-            <a href="{{ route('news.show', ['slug' => 'hanoi-halong-hanoi']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i
-                class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi
+              tiết <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN 3N2Đ.jpg') }}" alt="News 2" class="w-full h-56 object-cover">
+          <img src="{{ asset('images/blog-2.webp') }}" alt="News 2" class="w-full h-56 object-cover">
           <div class="p-6">
-            <a href="{{ route('news.show', ['slug' => 'danang-sontra-hoian-banahills-nguhanhson-3n2d']) }}"
+            <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
               class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN
+              Du lịch MICE là gì? Dịch vụ tổ chức MICE tại World Vision Events
             </a>
-            <a href="{{ route('news.show', ['slug' => 'danang-sontra-hoian-banahills-nguhanhson-3n2d']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i
-                class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
+              class="text-[#17375e] font-semibold hover:underline">Xem
+              chi tiết <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI.jpg') }}" alt="News 3" class="w-full h-56 object-cover">
+          <img src="{{ asset('images/blog-3.webp') }}" alt="News 3" class="w-full h-56 object-cover">
           <div class="p-6">
-            <a href="{{ route('news.show', ['slug' => 'hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi']) }}"
+            <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
               class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI
+              Cẩm nang tổ chức hội nghị, hội thảo quốc tế tại Việt Nam
             </a>
-            <a href="{{ route('news.show', ['slug' => 'hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi tiết <i
-                class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi
+              tiết <i class="fas fa-arrow-right ml-2"></i></a>
+          </div>
+        </div>
+
+        <!-- News Card -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+          <img src="{{ asset('images/blog-4.webp') }}" alt="News 3" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}"
+              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+              HỘI NGHỊ KHOA HỌC THƯỜNG NIÊN APSCVIR 2025
+            </a>
+            <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi
+              tiết <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
       </div>

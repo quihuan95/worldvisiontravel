@@ -156,4 +156,41 @@ class LandingController extends Controller
       abort(404);
     }
   }
+
+  public function getBlogs($slug)
+  {
+    $listNews = [
+      "to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events" => [
+        "views" => "post1",
+        "title" => "Tổ chức sự kiện chuyên nghiệp A-Z cùng World Vision Events",
+        "content_view" => "pages.blogs.contents.post1"
+      ],
+      "du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events" => [
+        "views" => "post1",
+        "title" => "Du lịch MICE là gì? Dịch vụ tổ chức MICE tại World Vision Events",
+        "content_view" => "pages.blogs.contents.post2"
+      ],
+      "cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam" => [
+        "views" => "post1",
+        "title" => "Cẩm nang tổ chức hội nghị, hội thảo quốc tế tại Việt Nam",
+        "content_view" => "pages.blogs.contents.post3"
+      ],
+      "hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025" => [
+        "views" => "post1",
+        "title" => "HỘI NGHỊ KHOA HỌC THƯỜNG NIÊN APSCVIR 2025",
+        "content_view" => "pages.blogs.contents.post4"
+      ]
+    ];
+
+    if (array_key_exists($slug, $listNews)) {
+      return view('pages.blogs.layout', [
+        'title' => $listNews[$slug]['title'],
+        'contentView' => $listNews[$slug]['content_view'],
+        'listNews' => $listNews,
+        'currentSlug' => $slug
+      ]);
+    } else {
+      abort(404);
+    }
+  }
 }
