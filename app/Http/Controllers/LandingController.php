@@ -159,33 +159,64 @@ class LandingController extends Controller
 
   public function getBlogs($slug)
   {
+    $locale = app()->getLocale();
     $listNews = [
       "to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events" => [
         "views" => "post1",
-        "title" => "Tổ chức sự kiện chuyên nghiệp A-Z cùng World Vision Events",
-        "content_view" => "pages.blogs.contents.post1"
+        "title" => [
+          "vi" => "Tổ chức sự kiện chuyên nghiệp A-Z cùng World Vision Events",
+          "en" => "Professional Event Organization A-Z with World Vision Events"
+        ],
+        "content_view" => [
+          "vi" => "pages.blogs.contents.vi.post1",
+          "en" => "pages.blogs.contents.en.post1"
+        ]
       ],
       "du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events" => [
-        "views" => "post1",
-        "title" => "Du lịch MICE là gì? Dịch vụ tổ chức MICE tại World Vision Events",
-        "content_view" => "pages.blogs.contents.post2"
+        "views" => "post2",
+        "title" => [
+          "vi" => "Du lịch MICE là gì? Dịch vụ tổ chức MICE tại World Vision Events",
+          "en" => "What is MICE tourism? MICE service at World Vision Events"
+        ],
+        "content_view" => [
+          "vi" => "pages.blogs.contents.vi.post2",
+          "en" => "pages.blogs.contents.en.post2"
+        ]
       ],
       "cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam" => [
-        "views" => "post1",
-        "title" => "Cẩm nang tổ chức hội nghị, hội thảo quốc tế tại Việt Nam",
-        "content_view" => "pages.blogs.contents.post3"
+        "views" => "post3",
+        "title" => [
+          "vi" => "Cẩm nang tổ chức hội nghị, hội thảo quốc tế tại Việt Nam",
+          "en" => "Handbook for organizing international conferences and seminars in Vietnam"
+        ],
+        "content_view" => [
+          "vi" => "pages.blogs.contents.vi.post3",
+          "en" => "pages.blogs.contents.en.post3"
+        ]
       ],
       "hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025" => [
-        "views" => "post1",
-        "title" => "HỘI NGHỊ KHOA HỌC THƯỜNG NIÊN APSCVIR 2025",
-        "content_view" => "pages.blogs.contents.post4"
+        "views" => "post4",
+        "title" => [
+          "vi" => "HỘI NGHỊ KHOA HỌC THƯỜNG NIÊN APSCVIR 2025",
+          "en" => "APSCVIR 2025 Annual Scientific Conference"
+        ],
+        "content_view" => [
+          "vi" => "pages.blogs.contents.vi.post4",
+          // "en" => "pages.blogs.contents.en.post4"
+        ]
       ]
     ];
 
     if (array_key_exists($slug, $listNews)) {
+      $title = $listNews[$slug]['title'][$locale] ?? $listNews[$slug]['title']['vi'];
+      $contentView = $listNews[$slug]['content_view'][$locale] ?? $listNews[$slug]['content_view']['vi'];
+      // Nếu không có view tiếng Anh thì luôn trả về view tiếng Việt
+      if ($locale === 'en' && (empty($listNews[$slug]['content_view']['en']) || !isset($listNews[$slug]['content_view']['en']))) {
+        $contentView = $listNews[$slug]['content_view']['vi'];
+      }
       return view('pages.blogs.layout', [
-        'title' => $listNews[$slug]['title'],
-        'contentView' => $listNews[$slug]['content_view'],
+        'title' => $title,
+        'contentView' => $contentView,
         'listNews' => $listNews,
         'currentSlug' => $slug
       ]);

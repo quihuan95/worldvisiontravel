@@ -11,13 +11,13 @@
 
     <!-- Sidebar -->
     <div class="w-full md:w-1/5 space-y-4">
-      <h2 class="text-xl font-semibold mb-2">Bài viết khác</h2>
+      <h2 class="text-xl font-semibold mb-2">{{ __('other_posts') }}</h2>
       <ul class="space-y-2">
         @foreach ($listNews as $slug => $item)
           @if ($slug != $currentSlug)
             <li>
               <a href="{{ route('blogs.show', ['slug' => $slug]) }}" class="text-blue-600 hover:underline">
-                {{ $item['title'] }}
+                {{ $item['title'][app()->getLocale()] ?? $item['title']['vi'] }}
               </a>
             </li>
           @endif

@@ -331,44 +331,63 @@
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/techcombank-logo.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/1.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
           </div>
-          <!-- Slide 2 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/egis-logo.png') }}" alt="Egis Việt Nam" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/2.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
           </div>
-          <!-- Slide 3 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/isuzu-logo.png') }}" alt="Isuzu" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/3.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
           </div>
-          <!-- Slide 4 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/vietcombank-logo.png') }}" alt="Vietcombank" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/4.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
           </div>
-          <!-- Slide 5 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/kita-logo.png') }}" alt="Kita Group" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/4.1.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
           </div>
-          <!-- Slide 6 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/adelaide-logo.png') }}" alt="Trường Adelaide" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/5.png') }}" alt="Techcombank" class="h-16 object-contain mx-auto">
           </div>
-          <!-- Slide 7 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/nhidong-logo.png') }}" alt="BV Nhi Đồng" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/6.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
           </div>
-          <!-- Slide 8 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/unicef-logo.png') }}" alt="UNICEF" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/7.jpg') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
           </div>
-          <!-- Slide 9 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/bvbank-logo.png') }}" alt="BV Bank" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/8.1.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
           </div>
-          <!-- Slide 10 -->
           <div class="swiper-slide flex justify-center">
-            <img src="{{ asset('images/vcci-logo.png') }}" alt="VCCI" class="h-16 object-contain mx-auto">
+            <img src="{{ asset('images/doi_tac/8.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
           </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/9.jpg') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/9.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/10.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/11.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/12.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/13.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/14.png') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/15.jpg') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+          <div class="swiper-slide flex justify-center">
+            <img src="{{ asset('images/doi_tac/16.jpeg') }}" alt="Techcombank" class="h-24 object-contain mx-auto">
+          </div>
+
         </div>
       </div>
     </div>
