@@ -1,5 +1,5 @@
 <div class="container max-w-4xl shadow-sm rounded-sm mx-auto p-6 text-gray-800">
-  <h1 class="text-2xl font-bold mb-4">Chương trình du lịch <br> HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI</h1>
+  <h1 class="text-2xl font-bold mb-4">{{ __('tour_program') }} <br> HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI</h1>
   <div class="flex gap-x-3">
     <div class="flex-1 h-full object-cover">
       <img src="{{ asset('images/Ha-Khau-Sapa.jpg') }}" alt="">
@@ -11,10 +11,10 @@
       <img src="{{ asset('images/virtual_attach_file.jpg') }}" alt="">
     </div>
   </div>
-  <p class="mb-2">Thời gian: 3 ngày 3 đêm / Phương tiện: Ô tô / Khởi hành: tối thứ 2 & tối thứ 5 hàng tuần</p>
+  <p class="mb-2">{{ __('time') }}: 3 ngày 3 đêm / {{ __('vehicle') }}: Ô tô / {{ __('departure') }}: tối thứ 2 & tối thứ 5 hàng tuần</p>
   <h2 class="text-2xl font-semibold mb-2">Điểm nổi bật:</h2>
   <ul class="list-disc list-inside mb-6">
-    <li>Di chuyển từ Hà Nội nghỉ đêm trên xe cabin đôi vip</li>
+    <li>{{ __('move_from_hanoi') }}</li>
     <li>Sáng sớm đến Lào Cai được bố trí nhà nghỉ nghỉ ngơi và xe điện đưa đến cửa khẩu</li>
     <li>Tham quan những địa điểm nổi tiếng nhất tại các địa phương</li>
   </ul>
@@ -67,16 +67,16 @@
   </p>
   <p class="mb-2">23h30: Về đến bến xe Mỹ Đình hoặc Giáp Bát. Kết thúc chương trình tour. Hẹn gặp lại!
   </p>
-  <h2 class="text-2xl font-semibold mb-2">Giá tour bao gồm:</h2>
+  <h2 class="text-2xl font-semibold mb-2">{{ __('tour_price_includes') }}</h2>
   <ul class="list-disc list-inside mb-4">
     <li>Xe ô tô giường nằm và ghế ngả vận chuyển theo lịch trình tại Việt Nam và Trung Quốc</li>
     <li>Phí làm sổ thông hành bằng Căn cước công dân (CCCD)</li>
     <li>02 đêm khách sạn tiêu chuẩn 4 sao Trung Quốc...</li>
-    <li>Ăn uống: 2 bữa sáng tại khách sạn và 3 bữa chính...</li>
+    <li>{{ __('meals') }}: 2 bữa sáng tại khách sạn và 3 bữa chính...</li>
     <li>Vé thắng cảnh vào cửa một lần tại các điểm thăm quan...</li>
     <li>Hướng dẫn viên nói tiếng Việt đón tiễn đoàn từ Cửa khẩu...</li>
     <li>Bảo hiểm kết hợp an toàn du lịch Vân Nam</li>
-    <li>Quà tặng: Miễn phí phòng nhà nghỉ tạm buổi sáng + xe điện Cửa khẩu</li>
+    <li>{{ __('gift') }}: Miễn phí phòng nhà nghỉ tạm buổi sáng + xe điện Cửa khẩu</li>
   </ul>
 
   <h2 class="text-2xl font-semibold mb-2">Trẻ em:</h2>

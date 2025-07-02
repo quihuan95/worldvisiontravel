@@ -1,5 +1,5 @@
 <div class="container max-w-4xl shadow-sm rounded-sm mx-auto p-6 text-gray-800">
-  <h1 class="text-3xl font-bold mb-6">ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN <span class="text-lg font-medium">(3N2Đ)</span></h1>
+  <h1 class="text-3xl font-bold mb-6">ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN (3N2Đ)</h1>
   <div>
     <img src="{{ asset('images/nui-ngu-hanh-son-da-nang-1.jpg') }}" alt="">
   </div>
@@ -13,7 +13,7 @@
     <li>Không phụ thu vào dịp Lễ, Tết</li>
   </ul>
 
-  <h2 class="text-2xl font-semibold mb-2">Lịch trình</h2>
+  <h2 class="text-2xl font-semibold mb-2">{{ __('itinerary') }}</h2>
 
   <h3 class="text-xl font-semibold mt-4 mb-2">NGÀY 01: SƠN TRÀ – MỸ KHÊ – HỘI AN <span class="text-sm">(ăn trưa, tối)</span></h3>
   <div class="space-y-2">
@@ -39,7 +39,7 @@
       Giang Đài, chùa Tam Thai, sau đó xuống núi bằng đường bộ.</p>
     <p>Thăm làng đá mỹ nghệ Non Nước.</p>
     <p>Tham quan các điểm nổi bật của Đà Nẵng: tòa nhà hành chính, cầu quay sông Hàn, cầu Rồng, cầu Tình Yêu, tượng Cá Chép hóa Rồng, mua đặc sản tại chợ Hàn/supermarket.</p>
-    <p><strong>Trưa:</strong> Ăn trưa tại nhà hàng với đặc sản Đà Nẵng: “Bánh tráng cuốn thịt heo & Bún mắm”.</p>
+    <p><strong>Trưa:</strong> Ăn trưa tại nhà hàng với đặc sản Đà Nẵng: "Bánh tráng cuốn thịt heo & Bún mắm".</p>
     <p><strong>Chiều:</strong> Xe tiễn khách ra sân bay/ga Đà Nẵng (14h30–17h30). Sau thời gian này khách tự túc. Kết thúc chương trình.</p>
   </div>
 

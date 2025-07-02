@@ -12,17 +12,17 @@
 
     <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
       <h3>Thông tin khách hàng:</h3>
-      <p><strong>Họ và tên:</strong> {{ $data['name'] }}</p>
-      <p><strong>Email:</strong> {{ $data['email'] }}</p>
-      <p><strong>Số điện thoại:</strong> {{ $data['phone'] }}</p>
+      <p><strong>{{ __('name') }}:</strong> {{ $data['name'] }}</p>
+      <p><strong>{{ __('email') }}:</strong> {{ $data['email'] }}</p>
+      <p><strong>{{ __('phone') }}:</strong> {{ $data['phone'] }}</p>
       @if ($data['service'])
-        <p><strong>Dịch vụ quan tâm:</strong> {{ $data['service'] }}</p>
+        <p><strong>{{ __('services') }}:</strong> {{ $data['service'] }}</p>
       @endif
     </div>
 
     @if ($data['message'])
       <div style="background: #fff; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0;">
-        <h3>Nội dung tin nhắn:</h3>
+        <h3>{{ __('message') }}:</h3>
         <p>{{ $data['message'] }}</p>
       </div>
     @endif

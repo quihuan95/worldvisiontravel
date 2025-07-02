@@ -1,5 +1,5 @@
 <div class="container max-w-4xl shadow-sm rounded-sm mx-auto p-6 text-gray-800">
-  <h1 class="text-3xl font-bold mb-4">CHƯƠNG TRÌNH DU LỊCH HÀ NỘI – HẠ LONG – HÀ NỘI (3 NGÀY 2 ĐÊM)</h1>
+  <h1 class="text-3xl font-bold mb-4">{{ __('tour_program') }} HÀ NỘI – HẠ LONG – HÀ NỘI (3N2Đ)</h1>
 
   <h2 class="text-2xl font-semibold mb-3">NGÀY 1</h2>
   <h3 class="text-xl font-semibold mb-2">HÀ NỘI – HẠ LONG (Ăn sáng, trưa, tối)</h3>
@@ -55,10 +55,10 @@
   <p class="mb-2">Sau đó xe đưa đoàn về lại Hà Nội.</p>
   <p class="mb-4">Chiều tối: Về đến điểm đón ban đầu, HDV chào tạm biệt quý khách, hẹn gặp lại quý khách trong những chương trình lần sau.</p>
 
-  <h2 class="text-2xl font-semibold mb-3 text-red-600">GIÁ TOUR TRỌN GÓI: 3.350.000Đ/KHÁCH</h2>
+  <h2 class="text-2xl font-semibold mb-3 text-red-600">{{ __('full_package_price') }}: 3.350.000Đ/KHÁCH</h2>
   <p class="mb-4 text-gray-700">(Giá áp dụng cho đoàn từ 35 khách trở lên)</p>
 
-  <h3 class="text-xl font-semibold mb-2">GIÁ TOUR BAO GỒM</h3>
+  <h3 class="text-xl font-semibold mb-2">{{ __('tour_price_includes') }}</h3>
   <ul class="list-disc list-inside mb-4">
     <li>Xe vận chuyển xuyên suốt theo hành trình</li>
     <li>02 đêm lưu trú tại khách sạn 3 sao (2 khách/phòng, lẻ khách ngủ 3)</li>
@@ -77,7 +77,7 @@
         <li>Phòng tiệc riêng cho đoàn</li>
         <li>Hệ thống âm thanh, màn hình LED tiêu chuẩn</li>
         <li>MC chương trình</li>
-        <li>Quà tặng chương trình</li>
+        <li>{{ __('gift_program') }}</li>
       </ul>
     </li>
     <li>Các bữa ăn theo chương trình:
@@ -88,10 +88,10 @@
       </ul>
     </li>
     <li>Bảo hiểm du lịch mức trách nhiệm 20.000.000 VNĐ/sự vụ</li>
-    <li>Quà tặng chương trình: Mũ, nước</li>
+    <li>{{ __('gift_program') }}</li>
   </ul>
 
-  <h3 class="text-xl font-semibold mb-2">GIÁ TOUR KHÔNG BAO GỒM</h3>
+  <h3 class="text-xl font-semibold mb-2">{{ __('tour_price_excludes') }}</h3>
   <ul class="list-disc list-inside mb-4">
     <li>Thuế VAT</li>
     <li>Tip HDV, lái xe</li>
@@ -108,7 +108,7 @@
     </li>
   </ul>
 
-  <h3 class="text-xl font-semibold mb-2">GIÁ TOUR TRẺ EM</h3>
+  <h3 class="text-xl font-semibold mb-2">{{ __('children_tour_price') }}</h3>
   <ul class="list-disc list-inside mb-4">
     <li>Trẻ em dưới 5 tuổi: Miễn phí</li>
     <li>Trẻ em từ 5-10 tuổi: 70% giá tour</li>

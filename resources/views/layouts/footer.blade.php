@@ -7,8 +7,7 @@
           <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-[60px]">
         </div>
         <p class="text-gray-600 mb-6 max-w-md">
-          Công ty TNHH Du lịch và Sự kiện Tầm nhìn Thế giới - Dẫn đầu trong tổ chức sự kiện và du lịch toàn cầu
-          với hơn 15 năm kinh nghiệm.
+          {{ __('company_description') }}
         </p>
         <div class="flex space-x-4">
           <a href="tel:0913199866" class="relative w-[50px] h-[50px]">
@@ -25,33 +24,34 @@
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-lg font-semibold mb-6">Liên kết nhanh</h4>
+        <h4 class="text-lg font-semibold mb-6">{{ __('quick_links') }}</h4>
         <ul class="space-y-3">
-          <li><a href="#" class="text-gray-600 hover:text-[#ea903c] transition-colors">Trang chủ</a></li>
-          <li><a href="#services" class="text-gray-600 hover:text-[#ea903c] transition-colors">Dịch vụ</a></li>
-          <li><a href="#destinations" class="text-gray-600 hover:text-[#ea903c] transition-colors">Điểm đến</a></li>
-          <li><a href="#events" class="text-gray-600 hover:text-[#ea903c] transition-colors">Sự kiện</a></li>
-          <li><a href="#about" class="text-gray-600 hover:text-[#ea903c] transition-colors">Về chúng tôi</a></li>
-          <li><a href="#contact" class="text-gray-600 hover:text-[#ea903c] transition-colors">Liên hệ</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-[#ea903c] transition-colors">{{ __('home') }}</a></li>
+          <li><a href="#services" class="text-gray-600 hover:text-[#ea903c] transition-colors">{{ __('services') }}</a></li>
+          <li><a href="#destinations" class="text-gray-600 hover:text-[#ea903c] transition-colors">{{ __('destination') }}</a></li>
+          <li><a href="#events" class="text-gray-600 hover:text-[#ea903c] transition-colors">{{ __('event') }}</a></li>
+          <li><a href="#about" class="text-gray-600 hover:text-[#ea903c] transition-colors">{{ __('about') }}</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-[#ea903c] transition-colors">{{ __('contact') }}</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h4 class="text-lg font-semibold mb-6">Thông tin liên hệ</h4>
+        <h4 class="text-lg font-semibold mb-6">{{ __('contact_info') }}</h4>
         <div class="space-y-3 text-gray-600">
           <div class="flex items-start space-x-3">
             <i class="fas fa-map-marker-alt mt-1 lux-accent"></i>
-            <span class="text-sm">Số 05 Hoa Cau, phường 07, quận Phú Nhuận, TP.HCM</span>
+            <span class="text-sm">{{ __('address') }}</span>
           </div>
           <div class="flex items-center space-x-3">
             <i class="fas fa-phone lux-accent"></i>
-            <span class="text-sm">+84 913 199 866</span>
-            <span class="text-sm">+84 945 683 355</span>
+            <span class="text-sm">{{ __('phone1') }}</span>
+            <span>-</span>
+            <span class="text-sm">{{ __('phone2') }}</span>
           </div>
           <div class="flex items-center space-x-3">
             <i class="fas fa-envelope lux-accent"></i>
-            <span class="text-sm">events.worldvision@gmail.com</span>
+            <span class="text-sm">{{ __('email') }}</span>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
 
     <div class="border-t border-gray-200 pt-8 text-center">
       <p class="text-gray-500">
-        © <span x-text="new Date().getFullYear()"></span> Công ty TNHH Du lịch và Sự kiện Tầm nhìn Thế giới. Tất cả quyền được bảo lưu.
+        © <span x-text="new Date().getFullYear()"></span> {{ __('copyright') }}
       </p>
     </div>
   </div>

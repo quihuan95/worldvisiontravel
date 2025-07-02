@@ -9,15 +9,15 @@
 
     <div class="relative z-10 text-center text-[#17375e] px-4 max-w-5xl mx-auto">
       <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight lux-primary" id="hero-title">
-        <span class="lux-accent">Tầm nhìn Thế giới</span>
-        <div>Viết nên chuẩn mực mới của sự kiện</div>
+        <span class="lux-accent">{{ __('hero_title') }}</span>
+        <div>{{ __('hero_subtitle') }}</div>
       </h1>
       <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-        Đơn vị dẫn đầu trong tổ chức sự kiện, du lịch, MICE theo tiêu chuẩn quốc tế với hơn 15 năm kinh nghiệm
+        {{ __('hero_description') }}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="tel:0913199866" class="lux-btn px-10 py-4 text-lg">
-          Liên hệ ngay
+          {{ __('contact_now') }}
         </a>
       </div>
     </div>
@@ -43,7 +43,7 @@
           }, 50)">
             <span x-text="displayCount"></span>+
           </div>
-          <div class="opacity-70">Sự kiện thành công</div>
+          <div class="opacity-70">{{ __('successful_events') }}</div>
         </div>
         <div class="text-center">
           <div class="text-4xl md:text-5xl font-bold mb-2" x-data="{ count: 0, displayCount: '0' }" x-init="setInterval(() => {
@@ -54,7 +54,7 @@
           }, 100)">
             <span x-text="displayCount"></span>+
           </div>
-          <div class="opacity-70">Quốc gia phục vụ</div>
+          <div class="opacity-70">{{ __('served_countries') }}</div>
         </div>
         <div class="text-center">
           <div class="text-4xl md:text-5xl font-bold mb-2" x-data="{ count: 0, displayCount: '0' }" x-init="setInterval(() => {
@@ -65,7 +65,7 @@
           }, 50)">
             <span x-text="displayCount"></span>+
           </div>
-          <div class="opacity-70">Đối tác khách hàng</div>
+          <div class="opacity-70">{{ __('customer_partners') }}</div>
         </div>
         <div class="text-center">
           <div class="text-4xl md:text-5xl font-bold mb-2" x-data="{ count: 0, displayCount: '0' }" x-init="setInterval(() => {
@@ -76,7 +76,7 @@
           }, 80)">
             <span x-text="displayCount"></span>+
           </div>
-          <div class="opacity-70">Năm kinh nghiệm</div>
+          <div class="opacity-70">{{ __('years_experience') }}</div>
         </div>
       </div>
     </div>
@@ -86,9 +86,9 @@
   <section id="news" class="py-16 bg-gray-50 section-gsap">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">Tin tức & Sự kiện</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">{{ __('news') }} & {{ __('event') }}</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Cập nhật những tin tức mới nhất về tổ chức sự kiện và du lịch
+          {{ __('news_description') }}
         </p>
       </div>
 
@@ -99,10 +99,10 @@
           <div class="p-6">
             <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
               class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              Tổ chức sự kiện chuyên nghiệp A-Z cùng World Vision Events
+              {{ __('pro_event_title') }}
             </a>
-            <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi
-              tiết <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
+              class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
@@ -112,11 +112,10 @@
           <div class="p-6">
             <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
               class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              Du lịch MICE là gì? Dịch vụ tổ chức MICE tại World Vision Events
+              {{ __('mice_title') }}
             </a>
             <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
-              class="text-[#17375e] font-semibold hover:underline">Xem
-              chi tiết <i class="fas fa-arrow-right ml-2"></i></a>
+              class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
@@ -126,10 +125,10 @@
           <div class="p-6">
             <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
               class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              Cẩm nang tổ chức hội nghị, hội thảo quốc tế tại Việt Nam
+              {{ __('guide_title') }}
             </a>
-            <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi
-              tiết <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
+              class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
 
@@ -139,12 +138,17 @@
           <div class="p-6">
             <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}"
               class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              HỘI NGHỊ KHOA HỌC THƯỜNG NIÊN APSCVIR 2025
+              {{ __('apscvir_title') }}
             </a>
-            <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}" class="text-[#17375e] font-semibold hover:underline">Xem chi
-              tiết <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}" class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }}
+              <i class="fas fa-arrow-right ml-2"></i></a>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#" class="lux-btn px-10 py-4 text-lg">
+          {{ __('view_all') }}
+        </a>
       </div>
     </div>
   </section>
@@ -153,9 +157,9 @@
   <section id="services" class="py-20 lux-section section-gsap">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 lux-primary">Dịch vụ của chúng tôi</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 lux-primary">{{ __('services') }} {{ __('about') }}</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Chúng tôi cung cấp đa dạng các dịch vụ du lịch và tổ chức sự kiện chuyên nghiệp
+          {{ __('services_description') }}
         </p>
       </div>
 
@@ -165,20 +169,20 @@
           <div class="mb-6 flex justify-center group-hover:scale-110 transition-transform">
             <i class="fas fa-globe text-5xl lux-icon"></i>
           </div>
-          <h3 class="text-xl font-bold mb-4 text-[#17375e]">Tổ chức Hội nghị – Hội thảo Quốc tế</h3>
-          <p class="text-gray-600 mb-6">Tổ chức hội nghị, hội thảo chuyên nghiệp theo tiêu chuẩn quốc tế, từ quy mô doanh nghiệp đến các sự kiện cấp khu vực và toàn cầu.</p>
+          <h3 class="text-xl font-bold mb-4 text-[#17375e]">{{ __('service1_title') }}</h3>
+          <p class="text-gray-600 mb-6">{{ __('service1_desc') }}</p>
           <ul class="space-y-2">
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Kịch bản & vận hành chỉn chu
+              {{ __('service1_bullet1') }}
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Hệ thống hậu cần – kỹ thuật hiện đại
+              {{ __('service1_bullet2') }}
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Đội ngũ tổ chức tận tâm, giàu kinh nghiệm
+              {{ __('service1_bullet3') }}
             </li>
           </ul>
         </div>
@@ -188,20 +192,20 @@
           <div class="mb-6 flex justify-center group-hover:scale-110 transition-transform">
             <i class="fas fa-calendar-alt text-5xl lux-icon"></i>
           </div>
-          <h3 class="text-xl font-bold mb-4 text-[#17375e]">Tổ chức Sự kiện</h3>
-          <p class="text-gray-600 mb-6">Lên kế hoạch và thực hiện các sự kiện doanh nghiệp, hội nghị quốc tế với quy mô lớn.</p>
+          <h3 class="text-xl font-bold mb-4 text-[#17375e]">{{ __('service2_title') }}</h3>
+          <p class="text-gray-600 mb-6">{{ __('service2_desc') }}</p>
           <ul class="space-y-2">
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Thiết kế sự kiện độc đáo
+              {{ __('service2_bullet1') }}
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Quản lý logistics
+              {{ __('service2_bullet2') }}
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Hỗ trợ công nghệ
+              {{ __('service2_bullet3') }}
             </li>
           </ul>
         </div>
@@ -211,20 +215,20 @@
           <div class="mb-6 flex justify-center group-hover:scale-110 transition-transform">
             <i class="fas fa-users text-5xl lux-icon"></i>
           </div>
-          <h3 class="text-xl font-bold mb-4 text-[#17375e]">MICE Tourism</h3>
-          <p class="text-gray-600 mb-6">Giải pháp du lịch kết hợp hội họp, hội thảo, triển lãm và khen thưởng dành cho doanh nghiệp.</p>
+          <h3 class="text-xl font-bold mb-4 text-[#17375e]">{{ __('service3_title') }}</h3>
+          <p class="text-gray-600 mb-6">{{ __('service3_desc') }}</p>
           <ul class="space-y-2">
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Venue booking
+              {{ __('service3_bullet1') }}
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Team building
+              {{ __('service3_bullet2') }}
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Networking events
+              {{ __('service3_bullet3') }}
             </li>
           </ul>
         </div>
@@ -236,9 +240,9 @@
   <section id="destinations" class="py-20 bg-white section-gsap">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">Điểm đến phổ biến</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">{{ __('destination') }}</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Khám phá những điểm đến tuyệt vời nhất cùng chúng tôi
+          {{ __('destinations_description') }}
         </p>
       </div>
 
@@ -256,6 +260,11 @@
           </a>
         </template>
       </div>
+      <div class="text-center mt-10">
+        <a href="#" class="lux-btn px-10 py-4 text-lg">
+          {{ __('view_all') }}
+        </a>
+      </div>
     </div>
   </section>
 
@@ -263,9 +272,9 @@
   <section id="events" class="py-20 bg-white text-[#17375e] section-gsap">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Sự kiện và Dự án Nổi bật</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">{{ __('highlighted_events_projects') }}</h2>
         <p class="text-xl opacity-80 max-w-3xl mx-auto">
-          Những dự án thành công đã khẳng định uy tín và chất lượng dịch vụ của chúng tôi
+          {{ __('highlighted_projects_desc') }}
         </p>
       </div>
 
@@ -311,9 +320,9 @@
   <section class="py-20 lux-section section-gsap">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">Đối tác khách hàng của chúng tôi</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">{{ __('customer_partners_title') }}</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Chúng tôi tự hào đồng hành cùng các đối tác uy tín trong và ngoài nước
+          {{ __('customer_partners_desc') }}
         </p>
       </div>
 
@@ -369,9 +378,9 @@
   <section id="contact" class="py-20 lux-section section-gsap">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">Liên hệ với chúng tôi</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">{{ __('contact') }} {{ __('with_us') }}</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Hãy để chúng tôi giúp bạn tạo ra những trải nghiệm du lịch và sự kiện đáng nhớ
+          {{ __('contact_desc') }}
         </p>
       </div>
 
@@ -379,7 +388,7 @@
         <!-- Contact Info Cards -->
         <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow lux-card">
           <i class="fas fa-map-marker-alt text-5xl lux-accent mb-4"></i>
-          <h3 class="text-xl font-bold text-[#17375e] mb-4">Địa chỉ</h3>
+          <h3 class="text-xl font-bold text-[#17375e] mb-4">{{ __('address') }}</h3>
           <p class="text-gray-600">
             Số 05 Hoa Cau, phường 07, quận Phú Nhuận, thành phố Hồ Chí Minh, Việt Nam
           </p>
@@ -387,7 +396,7 @@
 
         <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow lux-card">
           <i class="fas fa-phone text-5xl lux-accent mb-4"></i>
-          <h3 class="text-xl font-bold text-[#17375e] mb-4">Điện thoại</h3>
+          <h3 class="text-xl font-bold text-[#17375e] mb-4">{{ __('phone') }}</h3>
           <p class="text-gray-600">
             Hotline 1: +84 945 683 355<br>
             Hotline 2: +84 913 199 866
@@ -396,7 +405,7 @@
 
         <div class="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow lux-card">
           <i class="fas fa-envelope text-5xl lux-accent mb-4"></i>
-          <h3 class="text-xl font-bold text-[#17375e] mb-4">Email</h3>
+          <h3 class="text-xl font-bold text-[#17375e] mb-4">{{ __('email') }}</h3>
           <p class="text-gray-600">
             events.worldvision@gmail.com
           </p>
@@ -406,40 +415,37 @@
       <!-- Contact Form -->
       <div class="max-w-4xl mx-auto">
         <div class="bg-white rounded-2xl p-8 shadow-lg lux-card">
-          <h3 class="text-2xl font-bold text-center mb-8 text-[#17375e]">Gửi yêu cầu tư vấn</h3>
+          <h3 class="text-2xl font-bold text-center mb-8 text-[#17375e]">{{ __('send') }} {{ __('contact') }}</h3>
           <form class="grid md:grid-cols-2 gap-6" x-data="contactForm()" @submit.prevent="submitForm()">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Họ và tên *</label>
-              <input x-model="form.name" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input" placeholder="Nhập họ và tên" required>
+              <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('name') }} *</label>
+              <input x-model="form.name" type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input"
+                placeholder="{{ __('your_name_placeholder') }}" required>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-              <input x-model="form.email" type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input" placeholder="Nhập email" required>
+              <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('email') }} *</label>
+              <input x-model="form.email" type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input"
+                placeholder="{{ __('your_email_placeholder') }}" required>
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Số điện thoại *</label>
-              <input x-model="form.phone" type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input" placeholder="Nhập số điện thoại"
-                required>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">Dịch vụ quan tâm</label>
+              <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('services') }}</label>
               <select x-model="form.service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input">
-                <option value="">Chọn dịch vụ</option>
-                <option value="du-lich">Du lịch quốc tế</option>
-                <option value="su-kien">Tổ chức sự kiện</option>
-                <option value="mice">MICE Tourism</option>
-                <option value="vip">Dịch vụ VIP</option>
+                <option value="">{{ __('choose_service') }}</option>
+                <option value="du-lich">{{ __('international_travel') }}</option>
+                <option value="su-kien">{{ __('event_organization') }}</option>
+                <option value="mice">{{ __('mice_tourism') }}</option>
+                <option value="vip">{{ __('vip_service') }}</option>
               </select>
             </div>
             <div class="md:col-span-2">
-              <label class="block text-sm font-medium text-gray-700 mb-2">Nội dung tin nhắn</label>
+              <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('message') }}</label>
               <textarea x-model="form.message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 lux-input"
-                placeholder="Mô tả chi tiết yêu cầu của bạn..."></textarea>
+                placeholder="{{ __('your_message_placeholder') }}"></textarea>
             </div>
             <div class="md:col-span-2 text-center">
               <button type="submit" :disabled="submitting" class="lux-btn px-12 py-4 text-lg rounded-full transition-colors">
-                <span x-show="!submitting">Gửi yêu cầu <i class="fas fa-arrow-right ml-2"></i></span>
-                <span x-show="submitting">Đang gửi...</span>
+                <span x-show="!submitting">{{ __('send') }} <i class="fas fa-arrow-right ml-2"></i></span>
+                <span x-show="submitting">{{ __('processing') }}</span>
               </button>
             </div>
           </form>
@@ -451,17 +457,17 @@
   <!-- Newsletter Section -->
   <section class="py-16 lux-accent-bg text-[#17375e] section-gsap">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Đăng ký nhận tin tức mới nhất</h2>
+      <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">{{ __('subscribe_newsletter') }}</h2>
       <p class="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
-        Cập nhật những ưu đãi du lịch hấp dẫn và thông tin sự kiện mới nhất
+        {{ __('subscribe_newsletter_desc') }}
       </p>
       <div class="max-w-md mx-auto flex gap-4" x-data="newsletter()">
-        <input x-model="email" type="email" placeholder="Nhập email của bạn"
+        <input x-model="email" type="email" placeholder="{{ __('your_email_placeholder') }}"
           class="flex-1 px-4 py-3 rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 lux-input">
         <button x-on:click="subscribe()" :disabled="subscribing"
           class="bg-[#17375e] text-white hover:bg-[#ea903c] disabled:opacity-50 px-6 py-3 rounded-lg font-semibold transition-colors">
-          <span x-show="!subscribing">Đăng ký</span>
-          <span x-show="subscribing">Đang xử lý...</span>
+          <span x-show="!subscribing">{{ __('subscribe') }}</span>
+          <span x-show="subscribing">{{ __('processing') }}</span>
         </button>
       </div>
     </div>

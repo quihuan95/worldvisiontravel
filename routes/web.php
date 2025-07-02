@@ -3,13 +3,22 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 
 Route::get('/', [LandingController::class, 'index'])->name('home');
 
+Route::get('/news', [LandingController::class, 'newsList'])->name('news.index');
+
 Route::get('/news/{slug}', [LandingController::class, 'getNews'])->name('news.show');
 
+Route::get('/blogs', [LandingController::class, 'newsList'])->name('blogs.index');
+
 Route::get('/blogs/{slug}', [LandingController::class, 'getBlogs'])->name('blogs.show');
+
+
 
 
 // API routes for form submissions
@@ -38,3 +47,10 @@ Route::post('/api/newsletter', function (Illuminate\Http\Request $request) {
 
     return response()->json(['message' => 'Đăng ký newsletter thành công!']);
 });
+
+Route::post('/lang-switch', function () {
+    $lang = request('lang', 'vi');
+    Session::put('locale', $lang);
+    App::setLocale($lang);
+    return Redirect::back();
+})->name('lang.switch');

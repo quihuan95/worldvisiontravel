@@ -1,4 +1,7 @@
 <div class="fixed right-4 bottom-4 flex flex-col space-y-4 z-50">
+  <a href="mailto:events.worldvision@gmail.com" class="relative w-[50px] h-[50px]">
+    <img src="{{ asset('images/email.png') }}" class="absolute w-full h-full object-contain" alt="hotline">
+  </a>
   <a href="tel:0913199866" class="relative w-[50px] h-[50px]">
     <img src="{{ asset('images/hotline.png') }}" class="absolute w-full h-full object-contain" alt="hotline">
   </a>
