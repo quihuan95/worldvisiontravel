@@ -39,33 +39,33 @@
 
         slides: [{
             image: `{{ asset('images/16.png') }}`,
-            caption: 'APAC DNS Forum 2025',
+            caption: `{{ __('apac_dns_caption') }}`,
+            description: `{{ __('apac_dns_desc') }}`,
             link: 'https://drive.google.com/file/d/1BKkHI5WyOQiBF8tz9kYyMuZKVOnP0s17/view?usp=drive_link',
-            description: 'Từ ngày 8 – 9/5/2025, Hà Nội đã trở thành tâm điểm của ngành CNTT châu Á - Thái Bình Dương với sự kiện APAC DNS Forum 2025 – diễn đàn quốc tế quy mô lớn nhất về hệ thống tên miền (DNS) do ICANN phối hợp cùng VNNIC tổ chức.'
           },
           {
             image: `{{ asset('images/17.png') }}`,
-            caption: 'AIFEEX Gala Hà Nội 2025 ',
+            caption: `{{ __('aifeex_gala_caption') }}`,
+            description: `{{ __('aifeex_gala_desc') }}`,
             link: 'https://drive.google.com/file/d/1l1Rsa6JLf6Itbmdd0H8TLoMYKsfyI8KH/view?usp=drive_link',
-            description: 'Dưới ánh đèn rực rỡ của Trung tâm Hội nghị Quốc gia vào tối ngày 16/3, hơn 1.500 khách mời đã cùng nhau tạo nên một đêm hội đáng nhớ.'
           },
           {
             image: `{{ asset('images/18.png') }}`,
-            caption: 'SingWow - Party Mùa Hè',
+            caption: `{{ __('singwow_caption') }}`,
+            description: `{{ __('singwow_desc') }}`,
             link: 'https://drive.google.com/file/d/1eKYe-WiKOXDhZOZtonG6YpM99tysIFFl/view?usp=drive_link',
-            description: 'Ngày 26/4 tại ChillHouse – 179 Hai Bà Trưng, Quận 3, những "gia tộc" SingWow đã cùng nhau tạo nên các kiệt tác graffiti đầy sáng tạo'
           },
           {
             image: `{{ asset('images/19.png') }}`,
-            caption: 'Lễ Kỷ Niệm 70 Năm Ngày Truyền Thống Bảo Đảm An Toàn Hàng Hải Việt Nam',
+            caption: `{{ __('maritime_caption') }}`,
+            description: `{{ __('maritime_desc') }}`,
             link: 'https://drive.google.com/file/d/1MMkBJCbtJZucaVqD5SQz90eABDlo7tjU/view?usp=drive_link',
-            description: 'Ngày 9–10/5/2025, Tổng công ty Bảo đảm An toàn hàng hải Việt Nam long trọng tổ chức Lễ Kỷ niệm 70 năm ngày truyền thống. Sự kiện diễn ra thành công tốt đẹp quy tụ 500 đại biểu trong ngành tham gia'
           },
           {
             image: `{{ asset('images/20.png') }}`,
-            caption: 'Hội Nghị Khoa Học Thường Niên APSCVIR 2025',
+            caption: `{{ __('apscvir_caption') }}`,
+            description: `{{ __('apscvir_desc') }}`,
             link: 'https://drive.google.com/file/d/12yvipz-XpvYewHgQOpLup_mx3Vv6K7uk/view?usp=drive_link',
-            description: 'Từ ngày 25–27/4/2025, Hội nghị khoa học thường niên APSCVIR đã diễn ra thành công tại thành phố Đà Nẵng, quy tụ hơn 1200 chuyên gia, bác sĩ đầu ngành trong lĩnh vực can thiệp mạch và điện quang.'
           }
         ],
 
