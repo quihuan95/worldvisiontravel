@@ -9,14 +9,15 @@
 
     <div class="relative z-10 text-center text-[#17375e] px-4 max-w-5xl mx-auto">
       <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight lux-primary" id="hero-title">
-        Khám phá thế giới cùng <span class="lux-accent">Tầm nhìn Thế giới</span>
+        <span class="lux-accent">Tầm nhìn Thế giới</span>
+        <div>Viết nên chuẩn mực mới của sự kiện</div>
       </h1>
       <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-        Dẫn đầu trong tổ chức sự kiện và du lịch toàn cầu với hơn 15 năm kinh nghiệm
+        Đơn vị dẫn đầu trong tổ chức sự kiện, du lịch, MICE theo tiêu chuẩn quốc tế với hơn 15 năm kinh nghiệm
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="tel:0913199866" class="lux-btn px-10 py-4 text-lg">
-          Liên hệ ngay <i class="fas fa-arrow-right ml-2 lux-icon"></i>
+          Liên hệ ngay
         </a>
       </div>
     </div>
@@ -87,11 +88,11 @@
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-[#17375e]">Tin tức & Sự kiện</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Cập nhật những tin tức mới nhất về du lịch và tổ chức sự kiện.
+          Cập nhật những tin tức mới nhất về tổ chức sự kiện và du lịch
         </p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         <!-- News Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
           <img src="{{ asset('images/width_1600.webp') }}" alt="News 1" class="w-full h-56 object-cover">
@@ -164,20 +165,20 @@
           <div class="mb-6 flex justify-center group-hover:scale-110 transition-transform">
             <i class="fas fa-globe text-5xl lux-icon"></i>
           </div>
-          <h3 class="text-xl font-bold mb-4 text-[#17375e]">Du lịch Quốc tế</h3>
-          <p class="text-gray-600 mb-6">Tổ chức các tour du lịch cao cấp đến những điểm đến hấp dẫn nhất thế giới với dịch vụ 5 sao.</p>
+          <h3 class="text-xl font-bold mb-4 text-[#17375e]">Tổ chức Hội nghị – Hội thảo Quốc tế</h3>
+          <p class="text-gray-600 mb-6">Tổ chức hội nghị, hội thảo chuyên nghiệp theo tiêu chuẩn quốc tế, từ quy mô doanh nghiệp đến các sự kiện cấp khu vực và toàn cầu.</p>
           <ul class="space-y-2">
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Hướng dẫn viên chuyên nghiệp
+              Kịch bản & vận hành chỉn chu
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Khách sạn 4-5 sao
+              Hệ thống hậu cần – kỹ thuật hiện đại
             </li>
             <li class="flex items-center text-sm text-gray-500">
               <i class="fas fa-check-circle lux-accent mr-2"></i>
-              Vận chuyển VIP
+              Đội ngũ tổ chức tận tâm, giàu kinh nghiệm
             </li>
           </ul>
         </div>

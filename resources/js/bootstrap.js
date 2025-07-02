@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 5, // Số logo hiển thị cùng lúc
         spaceBetween: 30, // Khoảng cách giữa các logo
         loop: true, // Trượt vô hạn
-        // autoplay: {
-        //     delay: 2000, // Thời gian giữa các lần trượt
-        //     disableOnInteraction: false, // Không dừng khi người dùng tương tác
-        // },
+        autoplay: {
+            delay: 2000, // Thời gian giữa các lần trượt
+            disableOnInteraction: false, // Không dừng khi người dùng tương tác
+        },
         breakpoints: {
             320: {
                 slidesPerView: 2,
