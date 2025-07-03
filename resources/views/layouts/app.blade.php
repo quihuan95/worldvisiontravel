@@ -70,24 +70,25 @@
         ],
 
         destinations: [{
-            name: 'HÀ NỘI – HẠ LONG – HÀ NỘI',
+            caption: `{{ __('hanoi_halong_caption') }}`,
             link: `{{ route('news.show', ['slug' => 'hanoi-halong-hanoi']) }}`,
             image: `{{ asset('images/HÀ NỘI – HẠ LONG – HÀ NỘI.jpg') }}`,
-            tours: '(3 NGÀY 2 ĐÊM)'
+            tours: `{{ __('hanoi_halong_tours') }}`
           },
           {
-            name: 'ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN',
+            caption: `{{ __('danang_sontra_hoian_caption') }}`,
             link: `{{ route('news.show', ['slug' => 'danang-sontra-hoian-banahills-nguhanhson-3n2d']) }}`,
             image: `{{ asset('images/ĐÀ NẴNG – SƠN TRÀ – HỘI AN – BÀ NÀ HILLS – NGŨ HÀNH SƠN 3N2Đ.jpg') }}`,
-            tours: '(3 NGÀY 2 ĐÊM)'
+            tours: `{{ __('danang_sontra_hoian_tours') }}`
           },
           {
-            name: 'HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI',
+            caption: `{{ __('hanoi_hakhau_binhbien_caption') }}`,
             link: `{{ route('news.show', ['slug' => 'hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi']) }}`,
             image: `{{ asset('images/HÀ NỘI - HÀ KHẨU - BÌNH BIÊN - KIẾN THỦY - MÔNG TỰ - HÀ NỘI.jpg') }}`,
-            tours: '(3 NGÀY 3 ĐÊM)'
+            tours: `{{ __('hanoi_hakhau_binhbien_tours') }}`
           }
         ],
+
 
         testimonials: [{
             name: 'Nguyễn Văn An',

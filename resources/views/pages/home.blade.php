@@ -247,13 +247,13 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <template x-for="destination in destinations" :key="destination.name">
+        <template x-for="destination in destinations" :key="destination.caption">
           <a :href="destination.link" class="group cursor-pointer gsap-item gsap-destination lux-card hover:shadow-xl transition-all duration-300">
             <div class="relative overflow-hidden rounded-2xl">
-              <img :src="destination.image" :alt="destination.name" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+              <img :src="destination.image" :alt="destination.caption" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white">
-                <h3 class="text-xl font-bold mb-1" x-text="destination.name"></h3>
+                <h3 class="text-xl font-bold mb-1" x-text="destination.caption"></h3>
                 <p class="lux-accent" x-text="destination.tours"></p>
               </div>
             </div>

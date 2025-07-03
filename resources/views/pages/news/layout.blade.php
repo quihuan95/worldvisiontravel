@@ -17,7 +17,7 @@
           @if ($slug != $currentSlug)
             <li>
               <a href="{{ route('news.show', ['slug' => $slug]) }}" class="text-blue-600 hover:underline">
-                {{ $item['title'] }}
+                {{ $item['title'][app()->getLocale()] ?? $item['title']['vi'] }}
               </a>
             </li>
           @endif

@@ -127,28 +127,55 @@ class LandingController extends Controller
 
   public function getNews($slug)
   {
+    $locale = app()->getLocale();
     $listNews = [
       "hanoi-halong-hanoi" => [
         "views" => "post1",
-        "title" => "Hà Nội – Hạ Long – Hà Nội",
-        "content_view" => "pages.news.contents.post1"
+        "title" => [
+          "vi" => "Hà Nội – Hạ Long – Hà Nội",
+          "en" => "Hanoi – Halong – Hanoi"
+        ],
+        "content_view" => [
+          "vi" => "pages.news.contents.vi.post1",
+          "en" => "pages.news.contents.en.post1"
+        ]
       ],
       "danang-sontra-hoian-banahills-nguhanhson-3n2d" => [
         "views" => "post2",
-        "title" => "Đà Nẵng – Sơn Trà – Hội An – Bà Nà Hills – Ngũ Hành Sơn",
-        "content_view" => "pages.news.contents.post2"
+        "title" => [
+          "vi" => "Đà Nẵng – Sơn Trà – Hội An – Bà Nà Hills – Ngũ Hành Sơn",
+          "en" => "Danang – Son Tra – Hoi An – Bana Hills – Ngu Hanh Son"
+        ],
+        "content_view" => [
+          "vi" => "pages.news.contents.vi.post2",
+          "en" => "pages.news.contents.en.post2"
+        ]
       ],
       "hanoi-hakhau-binhbien-kienthuy-mongtu-hanoi" => [
         "views" => "post3",
-        "title" => "Hà Nội – Hà Khẩu – Bình Biên – Kiến Thụy – Mông Tự – Hà Nội",
-        "content_view" => "pages.news.contents.post3"
+        "title" => [
+          "vi" => "Hà Nội – Hà Khẩu – Bình Biên – Kiến Thụy – Mông Tự – Hà Nội",
+          "en" => "Hanoi – Hekou – Binh Bien – Kien Thuy – Mong Tu – Hanoi"
+        ],
+        "content_view" => [
+          "vi" => "pages.news.contents.vi.post3",
+          "en" => "pages.news.contents.en.post3"
+        ]
       ]
     ];
 
     if (array_key_exists($slug, $listNews)) {
+      $title = $listNews[$slug]['title'][$locale] ?? $listNews[$slug]['title']['vi'];
+      $contentView = $listNews[$slug]['content_view'][$locale] ?? $listNews[$slug]['content_view']['vi'];
+
+      // Nếu không có view tiếng Anh thì luôn trả về view tiếng Việt
+      if ($locale === 'en' && (empty($listNews[$slug]['content_view']['en']) || !isset($listNews[$slug]['content_view']['en']))) {
+        $contentView = $listNews[$slug]['content_view']['vi'];
+      }
+
       return view('pages.news.layout', [
-        'title' => $listNews[$slug]['title'],
-        'contentView' => $listNews[$slug]['content_view'],
+        'title' => $title,
+        'contentView' => $contentView,
         'listNews' => $listNews,
         'currentSlug' => $slug
       ]);
@@ -156,6 +183,7 @@ class LandingController extends Controller
       abort(404);
     }
   }
+
 
   public function getBlogs($slug)
   {
