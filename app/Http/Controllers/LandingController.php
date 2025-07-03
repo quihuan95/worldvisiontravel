@@ -202,7 +202,7 @@ class LandingController extends Controller
         ],
         "content_view" => [
           "vi" => "pages.blogs.contents.vi.post4",
-          // "en" => "pages.blogs.contents.en.post4"
+          "en" => "pages.blogs.contents.en.post4"
         ]
       ]
     ];

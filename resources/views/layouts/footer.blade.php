@@ -16,7 +16,7 @@
           <a href="https://zalo.me/0913199866" target="_blank" class="relative w-[50px] h-[50px]">
             <img src="{{ asset('images/zalo-icon.png') }}" class="absolute w-full h-full object-contain" alt="zalo">
           </a>
-          <a href="https://wa.me/0913199866" target="_blank" class="relative w-[60px] h-[60px] -translate-y-1">
+          <a href="https://wa.me/0913929182" target="_blank" class="relative w-[60px] h-[60px] -translate-y-1">
             <img src="{{ asset('images/WhatsApp.png') }}" class="absolute w-full h-full object-contain" alt="WhatsApp">
           </a>
         </div>

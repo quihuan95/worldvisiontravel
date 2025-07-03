@@ -3,8 +3,8 @@
   <!-- Hero Banner -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden section-gsap lux-section">
     <div class="absolute inset-0">
-      <img src="{{ asset('images/bg.jpg') }}" alt="Global Travel Background" class="w-full h-full object-cover opacity-100">
-      <div class="absolute inset-0 lux-accent-bg opacity-70"></div>
+      <img src="{{ asset('images/bg.jpg') }}" alt="Global Travel Background" class="w-full  h-screen object-cover opacity-100 blur-[5px]">
+      <div class="absolute inset-0 lux-accent-bg opacity-60"></div>
     </div>
 
     <div class="relative z-10 text-center text-[#17375e] px-4 max-w-5xl mx-auto">
@@ -69,11 +69,11 @@
         </div>
         <div class="text-center">
           <div class="text-4xl md:text-5xl font-bold mb-2" x-data="{ count: 0, displayCount: '0' }" x-init="setInterval(() => {
-              if (count < 15) {
+              if (count < 10) {
                   count += 1;
                   displayCount = count.toLocaleString('de-DE');
               }
-          }, 80)">
+          }, 150)">
             <span x-text="displayCount"></span>+
           </div>
           <div class="opacity-70">{{ __('years_experience') }}</div>
