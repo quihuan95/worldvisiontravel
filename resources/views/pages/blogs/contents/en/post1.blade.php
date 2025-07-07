@@ -9,7 +9,7 @@
   <div class="space-y-4">
     <p>In today’s highly competitive market, event organization is no longer just a branding activity, it’s a strategic tool that enhances corporate image while strengthening
       connections with customers, employees, and partners.</p>
-    <p>With over 15 years of experience organizing hundreds of events of all sizes, World Vision Events offers comprehensive event solutions that are creative, innovative, and
+    <p>With almost 10 years of experience organizing hundreds of events of all sizes, World Vision Events offers comprehensive event solutions that are creative, innovative, and
       reliable.</p>
   </div>
 
