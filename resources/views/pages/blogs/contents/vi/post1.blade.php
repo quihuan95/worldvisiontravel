@@ -4,7 +4,7 @@
   <p class="text-lg">Trong bối cảnh cạnh tranh thị trường ngày càng cao, việc tổ chức sự kiện không chỉ đơn thuần là một hoạt động truyền thông thương hiệu, mà còn là công cụ chiến
     lược giúp doanh nghiệp nâng cao hình ảnh, gắn kết khách hàng, nhân sự và đối tác.</p>
 
-  <p class="text-lg">Với hơn 15 năm kinh nghiệm tổ chức hàng trăm sự kiện lớn nhỏ, <strong>World Vision Events</strong> mang đến giải pháp tổ chức sự kiện trọn gói – sáng tạo, đột
+  <p class="text-lg">Với gần 10 năm kinh nghiệm tổ chức hàng trăm sự kiện lớn nhỏ, <strong>World Vision Events</strong> mang đến giải pháp tổ chức sự kiện trọn gói – sáng tạo, đột
     phá và đáng tin cậy.</p>
 
   <h2 class="text-2xl font-semibold mt-6 mb-4">Tổ chức sự kiện là gì?</h2>
