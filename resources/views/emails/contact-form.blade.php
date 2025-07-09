@@ -29,7 +29,7 @@
 
     <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
       <p style="color: #6b7280; font-size: 14px;">
-        Email này được gửi từ form liên hệ trên website Tầm nhìn Thế giới.<br>
+        Email này được gửi từ form liên hệ trên website World Vision Events.<br>
         Thời gian: {{ now()->format('d/m/Y H:i:s') }}
       </p>
     </div>

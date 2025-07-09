@@ -41,7 +41,10 @@
         <div class="space-y-3 text-gray-600">
           <div class="flex items-start space-x-3">
             <i class="fas fa-map-marker-alt mt-1 lux-accent"></i>
-            <span class="text-sm">{{ __('address') }}</span>
+            <div class="flex flex-col gap-y-2">
+              <span class="text-sm">{{ __('address') }}</span>
+              <span class="text-sm">{{ __('trading_location') }}</span>
+            </div>
           </div>
           <div class="flex items-center space-x-3">
             <i class="fas fa-phone lux-accent"></i>
