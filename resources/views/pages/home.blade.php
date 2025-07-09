@@ -409,7 +409,14 @@
           <i class="fas fa-map-marker-alt text-5xl lux-accent mb-4"></i>
           <h3 class="text-xl font-bold text-[#17375e] mb-4">{{ __('address') }}</h3>
           <p class="text-gray-600">
-            Số 05 Hoa Cau, phường 07, quận Phú Nhuận, thành phố Hồ Chí Minh, Việt Nam
+          <div class="flex flex-col gap-y-2">
+            <div>
+              {{ __('address') }}: {{ __('address_info') }}
+            </div>
+            <div>
+              {{ __('trading_location') }}: {{ __('trading_location_info') }}
+            </div>
+          </div>
           </p>
         </div>
 
