@@ -54,7 +54,7 @@
           </div>
           <div class="flex items-center space-x-3">
             <i class="fas fa-envelope lux-accent"></i>
-            <span class="text-sm">{{ __('email') }}</span>
+            <span class="text-sm">{{ __('email_info') }}</span>
           </div>
         </div>
       </div>
