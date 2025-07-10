@@ -92,59 +92,95 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
-        <!-- News Card -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/width_1600.webp') }}" alt="News 1" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
-              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              {{ __('pro_event_title') }}
-            </a>
-            <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
-              class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
+      <!-- News Swiper Slider -->
+      <div class="news-swiper-container">
+        <div class="swiper-wrapper">
+          <!-- News Card 1 -->
+          <div class="swiper-slide !h-full">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full">
+              <img src="{{ asset('images/width_1600.webp') }}" alt="News 1" class="w-full h-56 object-cover">
+              <div class="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
+                    class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+                    {{ __('pro_event_title') }}
+                  </a>
+                </div>
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'to-chuc-su-kien-chuyen-nghiep-a-z-cung-world-vision-events']) }}"
+                    class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 2 -->
+          <div class="swiper-slide !h-full">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full">
+              <img src="{{ asset('images/blog-2.webp') }}" alt="News 2" class="w-full h-56 object-cover">
+              <div class="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
+                    class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+                    {{ __('mice_title') }}
+                  </a>
+                </div>
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
+                    class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 3 -->
+          <div class="swiper-slide !h-full">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full">
+              <img src="{{ asset('images/blog-3.webp') }}" alt="News 3" class="w-full h-56 object-cover">
+              <div class="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
+                    class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+                    {{ __('guide_title') }}
+                  </a>
+                </div>
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
+                    class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 4 -->
+          <div class="swiper-slide !h-full">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow h-full">
+              <img src="{{ asset('images/blog-4.webp') }}" alt="News 4" class="w-full h-56 object-cover">
+              <div class="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}"
+                    class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
+                    {{ __('apscvir_title') }}
+                  </a>
+                </div>
+                <div>
+                  <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}"
+                    class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }}
+                    <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- News Card -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/blog-2.webp') }}" alt="News 2" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
-              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              {{ __('mice_title') }}
-            </a>
-            <a href="{{ route('blogs.show', ['slug' => 'du-lich-mice-la-gi-dich-vu-to-chuc-mice-tai-world-vision-events']) }}"
-              class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
-          </div>
-        </div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next news-swiper-button-next"></div>
+        <div class="swiper-button-prev news-swiper-button-prev"></div>
 
-        <!-- News Card -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/blog-3.webp') }}" alt="News 3" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
-              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              {{ __('guide_title') }}
-            </a>
-            <a href="{{ route('blogs.show', ['slug' => 'cam-nang-to-chuc-hoi-nghi-hoi-thao-quoc-te-tai-viet-nam']) }}"
-              class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }} <i class="fas fa-arrow-right ml-2"></i></a>
-          </div>
-        </div>
-
-        <!-- News Card -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
-          <img src="{{ asset('images/blog-4.webp') }}" alt="News 3" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}"
-              class="text-xl font-bold block mb-4 text-[#17375e] hover:underline cursor-pointer">
-              {{ __('apscvir_title') }}
-            </a>
-            <a href="{{ route('blogs.show', ['slug' => 'hoi-nghi-khoa-hoc-thuong-nien-apscvir-2025']) }}" class="text-[#17375e] font-semibold hover:underline">{{ __('read_more') }}
-              <i class="fas fa-arrow-right ml-2"></i></a>
-          </div>
-        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination news-swiper-pagination"></div>
       </div>
+
       <div class="text-center mt-10">
         <a href="#" class="lux-btn px-10 py-4 text-lg">
           {{ __('view_all') }}
