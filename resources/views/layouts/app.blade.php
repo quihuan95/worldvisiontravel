@@ -7,6 +7,11 @@
   <title>World Vision Events - Tầm nhìn Thế giới - Du lịch và Sự kiện</title>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta property="og:title" content="World Vision Events - Tầm nhìn Thế giới - Du lịch và Sự kiện">
+  <meta property="og:description" content="World Vision Events - Tầm nhìn Thế giới - Du lịch và Sự kiện">
+  <meta property="og:image" content="{{ asset('images/logo.png') }}">
+  <meta property="og:url" content="https://worldvisionevents.com/">
+  <meta property="og:type" content="website">
   <!-- GSAP CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
