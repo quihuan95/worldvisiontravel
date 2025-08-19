@@ -1,9 +1,9 @@
 <header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="w-full xl:container mx-auto px-4 py-4">
+  <div class="w-full xl:container mx-auto px-4 py-1">
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <a href="{{ route('home') }}" class="flex items-center space-x-2">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="rounded-lg h-[60px] object-contain">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="rounded-lg h-[100px] object-contain">
         <!-- Language Switcher -->
       </a>
       <!-- Desktop Navigation -->

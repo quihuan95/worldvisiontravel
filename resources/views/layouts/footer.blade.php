@@ -4,7 +4,7 @@
       <!-- Company Info -->
       <div class="lg:col-span-2">
         <div class="flex items-center space-x-2 mb-6">
-          <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-[60px]">
+          <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-[150px]">
         </div>
         <p class="text-gray-600 mb-6 max-w-md">
           {{ __('company_description') }}
